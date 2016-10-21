@@ -6,8 +6,8 @@ Change the values in the constructor
 
 | Variable  | Info |
 | ------------- | ------------- |
-| rootUser  | the user you login with into WHM  |
-| hash  | you can get it from WHM Interface (Home >> Clusters >> Remote Access Key) or from file /root/.accesshash  |
+| rootUser  | the user you login into WHM  |
+| hash  | you can get it from WHM Interface (Home >> Clusters >> Remote Access Key) or from file /root/.accesshash more details https://confluence2.cpanel.net/display/1144Docs/Remote+Access+Key |
 | ipAddress | your cPanel IP Address |
 
 The function **callCpanelApi** has the parameters 
