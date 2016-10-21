@@ -22,3 +22,34 @@ $cpanel = new Cpanel();
 $cpanel->callWHMApi('listaccts');
 $cpanel->callCpanelApi('user', 'Email', 'listpopswithdisk')
 ```
+
+## Samples
+
+### cPanel API 2 Calls (callCpanelApi function) 
+
+#### Email::listpopswithdisk
+Details: https://confluence2.cpanel.net/display/SDK/cPanel+API+2+Functions+-+Email%3A%3Alistpopswithdisk
+```php
+$cpanel->callCpanelApi('cpaneluser', 'Email', 'listpopswithdisk');
+```
+
+#### SubDomain::addsubdomain
+Details: https://confluence2.cpanel.net/display/SDK/cPanel+API+2+Functions+-+SubDomain%3A%3Aaddsubdomain
+```php
+$cpanel->callCpanelApi('cpaneluser', 'SubDomain', 'addsubdomain', 'domain=subdomain.yourdomain.com&rootdomain=yourdomain.com');
+```
+
+### WHM API 1 Calls (callWHMApi function)
+
+#### create_user_session
+Details: This function creates a new temporary user session for a specified service... https://confluence2.cpanel.net/display/SDK/WHM+API+1+Functions+-+create_user_session
+```php
+$cpanel->callWHMApi('create_user_session', 'user=cpaneluser&service=webmaild&locale=de&app=roundcube');
+```
+Available Services are webmaild, cpaneld and whostmgrd
+
+#### accountsummary
+Details: https://confluence2.cpanel.net/display/SDK/WHM+API+1+Functions+-+accountsummary
+```php
+$cpanel->callWHMApi('accountsummary', 'user=cpaneluser');
+```
