@@ -6,7 +6,7 @@ Change the values in the constructor
 
 | Variable  | Info |
 | ------------- | ------------- |
-| rootUser  | user you login with into WHM  |
+| rootUser  | the user you login with into WHM  |
 | hash  | you can get it from WHM Interface (Home >> Clusters >> Remote Access Key) or from file /root/.accesshash  |
 | ipAddress | your cPanel IP Address |
 
