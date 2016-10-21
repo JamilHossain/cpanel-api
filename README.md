@@ -13,7 +13,7 @@ Change the values in the constructor
 The function **callCpanelApi** has the parameters 
 
 1. has to be the cpanel user you want to use
-2. Is the Module name
+2. is the Module name
 3. is the function you want to call 
 4. is an array with required and/or additional parameters
 
