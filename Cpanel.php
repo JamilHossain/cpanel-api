@@ -44,17 +44,20 @@ class Cpanel {
 	 * @param $user
 	 * @param $module
 	 * @param $function
-	 * @param null $parameter
+	 * @param array $parameters
 	 * @return mixed
 	 */
-	public function callCpanelApi($user, $module, $function, $parameter = null)
+	public function callCpanelApi($user, $module, $function, $parameters = array())
 	{
 		$query = "https://" . $this->ipAddress . ":" . $this->port . "/json-api/"
 			. "cpanel?cpanel_jsonapi_user=" . $user
 		    . "&cpanel_jsonapi_apiversion=2"
 			. "&cpanel_jsonapi_module=" . $module
-			. "&cpanel_jsonapi_func=" . $function
-			. $parameter;
+			. "&cpanel_jsonapi_func=" . $function;
+
+		foreach ($parameters as $key => $value) {
+			$query .= "&$key=$value";
+		}
 
 		$result = $this->exec($query);
 
@@ -66,15 +69,18 @@ class Cpanel {
 	 * https://confluence2.cpanel.net/display/SDK/Guide+to+WHM+API+1
 	 *
 	 * @param $function
-	 * @param null $parameter
+	 * @param array $parameters
 	 * @return mixed
 	 */
-	public function callWHMApi($function, $parameter = null)
+	public function callWHMApi($function, $parameters = array())
 	{
 		$query = "https://" . $this->ipAddress . ":" . $this->port . "/json-api/"
 			. $function
-			. "?api.version=1&"
-			. $parameter;
+			. "?api.version=1&";
+
+		foreach ($parameters as $key => $value) {
+			$query .= "&$key=$value";
+		}
 
 		$result = $this->exec($query);
 
