@@ -3,7 +3,7 @@
     "version": "dev-master",
     "type": "library",
     "description": "Simple PHP Class for calling cPanel API 2 and WHM API 1",
-    "keywords": ["api", "cpanel", "whm"],
+    "keywords": ["api", "cpanel", "whm", "hosting"],
     "homepage": "http://github.com/pguso/cpanel-api",
     "license": "MIT",
     "authors": [
