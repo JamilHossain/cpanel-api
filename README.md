@@ -10,6 +10,18 @@ Change the values in the constructor
 | hash  | you can get it from WHM Interface (Home >> Clusters >> Remote Access Key) or from file /root/.accesshash  |
 | ipAddress | your cPanel IP Address |
 
+The function **callCpanelApi** has the parameters 
+
+1. has to be the cpanel user you want to use
+2. Is the Module name
+3. is the function you want to call 
+4. is an array with required and/or additional parameters
+
+The function **callWHMApi** has the parameters
+
+1. the function you want to call 
+2. an array with required and/or optional paramters
+
 ## Sample Code
 
 ```php
